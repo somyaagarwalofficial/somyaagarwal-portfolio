@@ -118,6 +118,16 @@
   .btn-ghost{border:1px solid var(--line-on-navy); color:var(--paper);}
   .btn-ghost:hover{border-color:var(--brass-light); transform:translateY(-1px);}
 
+  /* hero right column: photo + seal */
+  .hero-right{
+    display:flex; flex-direction:column; align-items:center; gap:22px;
+  }
+  .hero-photo{
+    width:160px; height:160px; object-fit:cover; border-radius:50%;
+    border:2px solid var(--brass);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+  }
+
   /* seal */
   .seal{
     width:128px; height:128px; border-radius:50%;
@@ -136,6 +146,8 @@
   }
   @media (max-width:720px){
     .hero-inner{grid-template-columns:1fr; gap:30px;}
+    .hero-right{flex-direction:row; gap:16px;}
+    .hero-photo{width:96px; height:96px;}
     .seal{width:96px; height:96px; justify-self:start;}
     .seal-initials{font-size:1.5rem;}
   }
@@ -264,7 +276,7 @@
   <div class="hero-inner">
     <div>
       <span class="eyebrow mono">B.A. LL.B (Hons.) · GGSIPU · 2022–2027</span>
-      <h1>Litigation research &amp; contract drafting, argued at the international level.</h1>
+      <h1>International Human Rights Mooter. Legal Researcher. Commercial Law Aspirant.</h1>
       <p class="lede">Fifth-year law student in New Delhi building toward commercial litigation and dispute resolution practice — with research experience at the Delhi High Court and the Supreme Court of India, and a drafting practice spanning NDAs, SaaS and founder agreements, and commercial leases.</p>
       <div class="hero-meta mono">
         <span>New Delhi, India</span>
@@ -275,13 +287,16 @@
         <a class="btn btn-primary" href="mailto:somyaagarwalofficial@gmail.com">Email me</a>
       </div>
     </div>
-    <div class="seal" aria-hidden="true">
-      <svg viewBox="0 0 128 128"><defs><path id="circlePath" d="M 64,64 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0"/></defs>
-        <text font-family="IBM Plex Mono, monospace" font-size="8.2" fill="#C7A472" letter-spacing="2.5">
-          <textPath href="#circlePath" startOffset="2%">ADVOCATE IN TRAINING • NEW DELHI •</textPath>
-        </text>
-      </svg>
-      <span class="seal-initials">SA</span>
+    <div class="hero-right">
+      <img src="assets/somya-photo.jpg" alt="Somya Agarwal" class="hero-photo">
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 128 128"><defs><path id="circlePath" d="M 64,64 m -48,0 a 48,48 0 1,1 96,0 a 48,48 0 1,1 -96,0"/></defs>
+          <text font-family="IBM Plex Mono, monospace" font-size="8.2" fill="#C7A472" letter-spacing="2.5">
+            <textPath href="#circlePath" startOffset="2%">ADVOCATE IN TRAINING • NEW DELHI •</textPath>
+          </text>
+        </svg>
+        <span class="seal-initials">SA</span>
+      </div>
     </div>
   </div>
 </section>
@@ -435,7 +450,7 @@
           <li>1st Runner-Up, Legal Quiz — International Women's Day, IIMT Delhi (2024)</li>
           <li>2nd Runner-Up, Legal Quiz — Constitutional Day, IIMT Delhi (2023)</li>
           <li>Participant, Model United Nations — IIMT Delhi (2023)</li>
-        </ul>
+          </ul>
         <h4>Leadership &amp; Community</h4>
         <ul>
           <li>Vice-President, Rotaract Club, IIMT Delhi (2024–Present)</li>
@@ -490,3 +505,4 @@
 
 </body>
 </html>
+     
